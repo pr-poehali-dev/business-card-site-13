@@ -1,31 +1,31 @@
 import Icon from '@/components/ui/icon';
 
-const NAME = 'Александр Иванов';
-const ROLE = 'Software Engineer';
+const NAME = 'Кудров Геннадий';
+const ROLE = 'Founder & Web Developer';
 
 const services = [
   {
     n: '01',
-    title: 'Web Development',
-    desc: 'Проектирование и разработка масштабируемых веб-приложений на React и TypeScript.',
+    title: 'Разработка сайтов',
+    desc: 'Создаю сайты под ключ — от лендинга до сложного продукта. Дизайн, код, запуск.',
   },
   {
     n: '02',
-    title: 'Backend & API',
-    desc: 'Надёжные серверные системы, REST и GraphQL API, работа с базами данных.',
+    title: 'SaaS-продукты',
+    desc: 'Проектирую и строю собственные SaaS-сервисы: от идеи и MVP до работающего бизнеса.',
   },
   {
     n: '03',
-    title: 'System Design',
-    desc: 'Архитектура высоконагруженных систем, оптимизация и техническое консультирование.',
+    title: 'Продуктовая разработка',
+    desc: 'Продумываю продукт целиком — архитектуру, монетизацию, рост и техническую базу.',
   },
 ];
 
 const socials = [
-  { label: 'GitHub', handle: '@alexivanov', icon: 'Github', href: '#' },
-  { label: 'LinkedIn', handle: '/in/alexivanov', icon: 'Linkedin', href: '#' },
-  { label: 'Telegram', handle: '@alexivanov', icon: 'Send', href: '#' },
-  { label: 'Twitter / X', handle: '@alexivanov', icon: 'Twitter', href: '#' },
+  { label: 'GitHub', handle: '@kudrov', icon: 'Github', href: '#' },
+  { label: 'Telegram', handle: '@kudrov', icon: 'Send', href: '#' },
+  { label: 'LinkedIn', handle: '/in/kudrov', icon: 'Linkedin', href: '#' },
+  { label: 'Twitter / X', handle: '@kudrov', icon: 'Twitter', href: '#' },
 ];
 
 const Index = () => {
@@ -35,7 +35,7 @@ const Index = () => {
       <header className="fixed top-0 left-0 right-0 z-50 mix-blend-difference">
         <div className="max-w-6xl mx-auto px-6 md:px-10 h-20 flex items-center justify-between text-white">
           <a href="#top" className="font-mono text-sm tracking-widest uppercase">
-            A·I
+            К·Г
           </a>
           <nav className="hidden md:flex items-center gap-8 font-mono text-xs uppercase tracking-widest">
             <a href="#about" className="hover:opacity-50 transition-opacity">Обо мне</a>
@@ -50,7 +50,7 @@ const Index = () => {
       <section id="top" className="relative min-h-screen flex flex-col justify-center px-6 md:px-10 pt-28 pb-16 overflow-hidden">
         <div className="max-w-6xl mx-auto w-full">
           <div className="font-mono text-xs uppercase tracking-[0.3em] text-black/50 mb-8 animate-fade-up">
-            {ROLE} · Based in Moscow · Available for work
+            {ROLE} · Делаю сайты и строю SaaS
           </div>
           <h1 className="font-sans font-bold leading-[0.9] tracking-tight text-[15vw] md:text-[11vw] lg:text-[9rem] animate-fade-up" style={{ animationDelay: '0.1s' }}>
             {NAME.split(' ')[0]}
@@ -58,8 +58,8 @@ const Index = () => {
             <span className="inline-block text-black/20">{NAME.split(' ')[1]}</span>
           </h1>
           <p className="mt-10 max-w-lg text-lg md:text-xl text-black/60 leading-relaxed animate-fade-up" style={{ animationDelay: '0.25s' }}>
-            Разрабатываю продуманные цифровые продукты — от идеи и архитектуры
-            до чистого продакшн-кода.
+            Создаю сайты и запускаю собственные SaaS-проекты. Превращаю идеи
+            в работающие продукты.
           </p>
           <div className="mt-12 animate-fade-up" style={{ animationDelay: '0.4s' }}>
             <a
@@ -81,7 +81,7 @@ const Index = () => {
         <div className="inline-flex animate-marquee">
           {Array.from({ length: 2 }).map((_, i) => (
             <span key={i} className="font-mono text-sm uppercase tracking-widest flex items-center">
-              {['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'System Design', 'Cloud', 'UI Engineering'].map((t) => (
+              {['Web Development', 'SaaS', 'Product', 'Startups', 'MVP', 'Design', 'Automation'].map((t) => (
                 <span key={t} className="mx-6 flex items-center gap-6">
                   {t} <span className="text-black/30">✦</span>
                 </span>
@@ -99,18 +99,24 @@ const Index = () => {
           </div>
           <div className="md:col-span-8">
             <p className="text-2xl md:text-4xl font-medium leading-tight tracking-tight">
-              Более 8 лет проектирую и строю программные продукты. Верю в
-              простоту, инженерную точность и внимание к деталям.
+              Я — Геннадий. Делаю сайты и строю собственные SaaS-проекты.
+              Мне нравится превращать сырые идеи в живые продукты, которыми
+              пользуются каждый день.
             </p>
-            <div className="mt-16 grid grid-cols-2 sm:grid-cols-3 gap-8 font-mono">
+            <p className="mt-8 text-lg md:text-xl text-black/60 leading-relaxed max-w-2xl">
+              Работаю на стыке разработки и продукта: сам проектирую, сам пишу
+              код, сам запускаю. Ценю простоту, скорость и результат — без
+              лишней воды и бесконечных согласований.
+            </p>
+            <div className="mt-16 grid sm:grid-cols-3 gap-px bg-black/15 border border-black/15 font-mono">
               {[
-                { k: '8+', v: 'Лет опыта' },
-                { k: '60+', v: 'Проектов' },
-                { k: '20+', v: 'Клиентов' },
+                { k: 'Fast', v: 'От идеи до запуска — быстро' },
+                { k: 'Own', v: 'Свои SaaS-продукты' },
+                { k: 'Full', v: 'Дизайн, код и запуск' },
               ].map((s) => (
-                <div key={s.v} className="border-t border-black pt-4">
-                  <div className="text-4xl md:text-5xl font-bold">{s.k}</div>
-                  <div className="mt-1 text-xs uppercase tracking-widest text-black/50">{s.v}</div>
+                <div key={s.k} className="bg-white p-6">
+                  <div className="text-2xl md:text-3xl font-bold">{s.k}</div>
+                  <div className="mt-2 text-xs uppercase tracking-widest text-black/50 leading-relaxed">{s.v}</div>
                 </div>
               ))}
             </div>
@@ -182,8 +188,8 @@ const Index = () => {
           <div className="mt-16 grid md:grid-cols-2 gap-10">
             <div>
               <div className="font-mono text-xs uppercase tracking-widest text-white/40 mb-2">Email</div>
-              <a href="mailto:hello@alexivanov.dev" className="text-2xl md:text-3xl font-medium hover:opacity-60 transition-opacity break-all">
-                hello@alexivanov.dev
+              <a href="mailto:hello@kudrov.dev" className="text-2xl md:text-3xl font-medium hover:opacity-60 transition-opacity break-all">
+                hello@kudrov.dev
               </a>
             </div>
             <div>
