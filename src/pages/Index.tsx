@@ -22,10 +22,9 @@ const services = [
 ];
 
 const socials = [
-  { label: 'GitHub', handle: '@kudrov', icon: 'Github', href: '#' },
-  { label: 'Telegram', handle: '@kudrov', icon: 'Send', href: '#' },
-  { label: 'LinkedIn', handle: '/in/kudrov', icon: 'Linkedin', href: '#' },
-  { label: 'Twitter / X', handle: '@kudrov', icon: 'Twitter', href: '#' },
+  { label: 'Telegram-канал', handle: '@KudrovinDigital', icon: 'Send', href: 'https://t.me/KudrovinDigital' },
+  { label: 'Telegram', handle: '@kudrovg', icon: 'MessageCircle', href: 'https://t.me/kudrovg' },
+  { label: 'Почта', handle: 'kudrovgdev@gmail.com', icon: 'Mail', href: 'mailto:kudrovgdev@gmail.com' },
 ];
 
 const Index = () => {
@@ -48,15 +47,6 @@ const Index = () => {
 
       {/* HERO */}
       <section id="top" className="relative min-h-screen flex flex-col justify-center px-6 md:px-10 pt-28 pb-16 overflow-hidden bg-black text-white">
-        {/* grid background */}
-        <div
-          className="absolute inset-0 opacity-[0.15]"
-          style={{
-            backgroundImage:
-              'linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)',
-            backgroundSize: '48px 48px',
-          }}
-        />
         {/* radial glow */}
         <div className="absolute inset-0 animate-glow-pulse" style={{ background: 'radial-gradient(ellipse 60% 50% at 50% 30%, rgba(255,255,255,0.12), transparent 70%)' }} />
 
@@ -172,11 +162,13 @@ const Index = () => {
             <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight">Соцсети</h2>
             <span className="font-mono text-xs uppercase tracking-[0.3em] text-black/40">(03)</span>
           </div>
-          <div className="grid sm:grid-cols-2 gap-px bg-black/15 border border-black/15">
+          <div className="grid sm:grid-cols-3 gap-px bg-black/15 border border-black/15">
             {socials.map((s) => (
               <a
                 key={s.label}
                 href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group bg-white flex items-center justify-between p-8 md:p-10 hover:bg-black hover:text-white transition-colors duration-300"
               >
                 <div className="flex items-center gap-5">
@@ -203,14 +195,14 @@ const Index = () => {
           <div className="mt-16 grid md:grid-cols-2 gap-10">
             <div>
               <div className="font-mono text-xs uppercase tracking-widest text-white/40 mb-2">Email</div>
-              <a href="mailto:hello@kudrov.dev" className="text-2xl md:text-3xl font-medium hover:opacity-60 transition-opacity break-all">
-                hello@kudrov.dev
+              <a href="mailto:kudrovgdev@gmail.com" className="text-2xl md:text-3xl font-medium hover:opacity-60 transition-opacity break-all">
+                kudrovgdev@gmail.com
               </a>
             </div>
             <div>
-              <div className="font-mono text-xs uppercase tracking-widest text-white/40 mb-2">Телефон</div>
-              <a href="tel:+79001234567" className="text-2xl md:text-3xl font-medium hover:opacity-60 transition-opacity">
-                +7 900 123-45-67
+              <div className="font-mono text-xs uppercase tracking-widest text-white/40 mb-2">Telegram</div>
+              <a href="https://t.me/kudrovg" target="_blank" rel="noopener noreferrer" className="text-2xl md:text-3xl font-medium hover:opacity-60 transition-opacity">
+                @kudrovg
               </a>
             </div>
           </div>
