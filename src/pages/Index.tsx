@@ -46,36 +46,33 @@ const Index = () => {
       </header>
 
       {/* HERO */}
-      <section id="top" className="relative min-h-screen flex flex-col justify-center px-6 md:px-10 pt-28 pb-16 overflow-hidden bg-black text-white">
-        {/* radial glow */}
-        <div className="absolute inset-0 animate-glow-pulse" style={{ background: 'radial-gradient(ellipse 60% 50% at 50% 30%, rgba(255,255,255,0.12), transparent 70%)' }} />
-
+      <section id="top" className="relative min-h-screen flex flex-col justify-center px-6 md:px-10 pt-28 pb-16 overflow-hidden bg-white text-black">
         <div className="relative max-w-6xl mx-auto w-full">
-          <div className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.3em] text-white/50 mb-8 animate-fade-up">
-            <span className="w-1.5 h-1.5 rounded-full bg-white animate-glow-pulse" />
+          <div className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.3em] text-black/50 mb-8 animate-fade-up">
+            <span className="w-1.5 h-1.5 rounded-full bg-black animate-glow-pulse" />
             {ROLE} · Делаю сайты и строю SaaS
           </div>
-          <h1 className="font-display font-black leading-[0.95] tracking-tight text-[13vw] md:text-[9vw] lg:text-[7.5rem] animate-fade-up" style={{ animationDelay: '0.1s' }}>
+          <h1 className="font-serif italic font-semibold leading-[0.95] tracking-tight text-[15vw] md:text-[10vw] lg:text-[8.5rem] animate-fade-up" style={{ animationDelay: '0.1s' }}>
             {NAME.split(' ')[0]}
             <br />
-            <span className="inline-block text-white/25">{NAME.split(' ')[1]}</span>
+            <span className="inline-block text-black/25">{NAME.split(' ')[1]}</span>
           </h1>
-          <p className="mt-10 max-w-lg text-lg md:text-xl text-white/60 leading-relaxed animate-fade-up" style={{ animationDelay: '0.25s' }}>
+          <p className="mt-10 max-w-lg text-lg md:text-xl text-black/60 leading-relaxed animate-fade-up" style={{ animationDelay: '0.25s' }}>
             Создаю сайты и запускаю собственные SaaS-проекты. Превращаю идеи
             в работающие продукты.
           </p>
           <div className="mt-12 animate-fade-up" style={{ animationDelay: '0.4s' }}>
             <a
               href="#contact"
-              className="group inline-flex items-center gap-3 font-mono text-sm uppercase tracking-widest border border-white rounded-full px-7 py-4 hover:bg-white hover:text-black transition-colors duration-300"
+              className="group inline-flex items-center gap-3 font-mono text-sm uppercase tracking-widest border border-black rounded-full px-7 py-4 hover:bg-black hover:text-white transition-colors duration-300"
             >
               Связаться
               <Icon name="ArrowDown" size={16} className="group-hover:translate-y-1 transition-transform" />
             </a>
           </div>
         </div>
-        <div className="relative mt-16 md:mt-24 max-w-6xl mx-auto w-full flex items-center gap-3 font-mono text-[10px] uppercase tracking-widest text-white/30 animate-fade-up" style={{ animationDelay: '0.5s' }}>
-          <span className="flex-1 h-px bg-white/15" />
+        <div className="relative mt-16 md:mt-24 max-w-6xl mx-auto w-full flex items-center gap-3 font-mono text-[10px] uppercase tracking-widest text-black/30 animate-fade-up" style={{ animationDelay: '0.5s' }}>
+          <span className="flex-1 h-px bg-black/15" />
           Scroll
           <Icon name="ArrowDown" size={12} />
         </div>

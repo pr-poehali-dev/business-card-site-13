@@ -21,6 +21,7 @@ export default {
 			fontFamily: {
 				sans: ['Golos Text', 'sans-serif'],
 				display: ['Unbounded', 'sans-serif'],
+				serif: ['Cormorant', 'serif'],
 				mono: ['JetBrains Mono', 'monospace'],
 			},
 			colors: {
