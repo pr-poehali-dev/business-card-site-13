@@ -47,32 +47,47 @@ const Index = () => {
       </header>
 
       {/* HERO */}
-      <section id="top" className="relative min-h-screen flex flex-col justify-center px-6 md:px-10 pt-28 pb-16 overflow-hidden">
-        <div className="max-w-6xl mx-auto w-full">
-          <div className="font-mono text-xs uppercase tracking-[0.3em] text-black/50 mb-8 animate-fade-up">
+      <section id="top" className="relative min-h-screen flex flex-col justify-center px-6 md:px-10 pt-28 pb-16 overflow-hidden bg-black text-white">
+        {/* grid background */}
+        <div
+          className="absolute inset-0 opacity-[0.15]"
+          style={{
+            backgroundImage:
+              'linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)',
+            backgroundSize: '48px 48px',
+          }}
+        />
+        {/* radial glow */}
+        <div className="absolute inset-0 animate-glow-pulse" style={{ background: 'radial-gradient(ellipse 60% 50% at 50% 30%, rgba(255,255,255,0.12), transparent 70%)' }} />
+
+        <div className="relative max-w-6xl mx-auto w-full">
+          <div className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.3em] text-white/50 mb-8 animate-fade-up">
+            <span className="w-1.5 h-1.5 rounded-full bg-white animate-glow-pulse" />
             {ROLE} · Делаю сайты и строю SaaS
           </div>
-          <h1 className="font-sans font-bold leading-[0.9] tracking-tight text-[15vw] md:text-[11vw] lg:text-[9rem] animate-fade-up" style={{ animationDelay: '0.1s' }}>
+          <h1 className="font-display font-black leading-[0.95] tracking-tight text-[13vw] md:text-[9vw] lg:text-[7.5rem] animate-fade-up" style={{ animationDelay: '0.1s' }}>
             {NAME.split(' ')[0]}
             <br />
-            <span className="inline-block text-black/20">{NAME.split(' ')[1]}</span>
+            <span className="inline-block text-white/25">{NAME.split(' ')[1]}</span>
           </h1>
-          <p className="mt-10 max-w-lg text-lg md:text-xl text-black/60 leading-relaxed animate-fade-up" style={{ animationDelay: '0.25s' }}>
+          <p className="mt-10 max-w-lg text-lg md:text-xl text-white/60 leading-relaxed animate-fade-up" style={{ animationDelay: '0.25s' }}>
             Создаю сайты и запускаю собственные SaaS-проекты. Превращаю идеи
             в работающие продукты.
           </p>
           <div className="mt-12 animate-fade-up" style={{ animationDelay: '0.4s' }}>
             <a
               href="#contact"
-              className="group inline-flex items-center gap-3 font-mono text-sm uppercase tracking-widest border border-black rounded-full px-7 py-4 hover:bg-black hover:text-white transition-colors duration-300"
+              className="group inline-flex items-center gap-3 font-mono text-sm uppercase tracking-widest border border-white rounded-full px-7 py-4 hover:bg-white hover:text-black transition-colors duration-300"
             >
               Связаться
               <Icon name="ArrowDown" size={16} className="group-hover:translate-y-1 transition-transform" />
             </a>
           </div>
         </div>
-        <div className="absolute bottom-6 right-6 md:right-10 font-mono text-[10px] uppercase tracking-widest text-black/40 rotate-90 origin-bottom-right hidden md:block">
-          Scroll ↓
+        <div className="relative mt-16 md:mt-24 max-w-6xl mx-auto w-full flex items-center gap-3 font-mono text-[10px] uppercase tracking-widest text-white/30 animate-fade-up" style={{ animationDelay: '0.5s' }}>
+          <span className="flex-1 h-px bg-white/15" />
+          Scroll
+          <Icon name="ArrowDown" size={12} />
         </div>
       </section>
 
@@ -98,7 +113,7 @@ const Index = () => {
             <span className="font-mono text-xs uppercase tracking-[0.3em] text-black/40">(01) — Обо мне</span>
           </div>
           <div className="md:col-span-8">
-            <p className="text-2xl md:text-4xl font-medium leading-tight tracking-tight">
+            <p className="font-display text-2xl md:text-4xl font-medium leading-tight tracking-tight">
               Я — Геннадий. Делаю сайты и строю собственные SaaS-проекты.
               Мне нравится превращать сырые идеи в живые продукты, которыми
               пользуются каждый день.
@@ -115,7 +130,7 @@ const Index = () => {
                 { k: 'Full', v: 'Дизайн, код и запуск' },
               ].map((s) => (
                 <div key={s.k} className="bg-white p-6">
-                  <div className="text-2xl md:text-3xl font-bold">{s.k}</div>
+                  <div className="font-display text-2xl md:text-3xl font-bold">{s.k}</div>
                   <div className="mt-2 text-xs uppercase tracking-widest text-black/50 leading-relaxed">{s.v}</div>
                 </div>
               ))}
@@ -128,7 +143,7 @@ const Index = () => {
       <section id="services" className="px-6 md:px-10 py-28 md:py-40 border-b border-black/10">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-baseline justify-between mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight">Услуги</h2>
+            <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight">Услуги</h2>
             <span className="font-mono text-xs uppercase tracking-[0.3em] text-black/40">(02)</span>
           </div>
           <div>
@@ -138,7 +153,7 @@ const Index = () => {
                 className="group grid md:grid-cols-12 gap-4 md:gap-10 items-start py-10 border-t border-black/15 hover:bg-black hover:text-white hover:px-6 transition-all duration-300"
               >
                 <div className="md:col-span-1 font-mono text-sm text-black/40 group-hover:text-white/50">{s.n}</div>
-                <h3 className="md:col-span-4 text-2xl md:text-3xl font-semibold tracking-tight">{s.title}</h3>
+                <h3 className="font-display md:col-span-4 text-xl md:text-2xl font-semibold tracking-tight">{s.title}</h3>
                 <p className="md:col-span-6 text-black/60 group-hover:text-white/70 leading-relaxed">{s.desc}</p>
                 <div className="md:col-span-1 flex md:justify-end">
                   <Icon name="ArrowUpRight" size={24} className="group-hover:rotate-45 transition-transform" />
@@ -154,7 +169,7 @@ const Index = () => {
       <section id="social" className="px-6 md:px-10 py-28 md:py-40 border-b border-black/10">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-baseline justify-between mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight">Соцсети</h2>
+            <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight">Соцсети</h2>
             <span className="font-mono text-xs uppercase tracking-[0.3em] text-black/40">(03)</span>
           </div>
           <div className="grid sm:grid-cols-2 gap-px bg-black/15 border border-black/15">
@@ -167,7 +182,7 @@ const Index = () => {
                 <div className="flex items-center gap-5">
                   <Icon name={s.icon} size={28} />
                   <div>
-                    <div className="text-xl font-semibold">{s.label}</div>
+                    <div className="font-display text-lg font-semibold">{s.label}</div>
                     <div className="font-mono text-xs text-black/50 group-hover:text-white/50">{s.handle}</div>
                   </div>
                 </div>
@@ -182,7 +197,7 @@ const Index = () => {
       <section id="contact" className="px-6 md:px-10 py-28 md:py-40 bg-black text-white">
         <div className="max-w-6xl mx-auto">
           <span className="font-mono text-xs uppercase tracking-[0.3em] text-white/40">(04) — Контакты</span>
-          <h2 className="mt-8 text-[12vw] md:text-[8rem] font-bold leading-none tracking-tighter">
+          <h2 className="font-display mt-8 text-[11vw] md:text-[6.5rem] font-black leading-[0.95] tracking-tight">
             Let's talk
           </h2>
           <div className="mt-16 grid md:grid-cols-2 gap-10">
